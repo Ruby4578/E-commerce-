@@ -1,0 +1,121 @@
+<html>
+<head>
+<Title> Meat & Polutry</title>
+</head>
+<LINK REL="stylesheet" TYPE="text/css" href="css.css">
+<body class="a">
+    <div class="banner-container">
+        <div class="banner">
+            <div class="image">
+                <img src="img/po.png.png" alt="Phone Icon">
+            </div>
+            <p>+39 351 011 5514</p>
+            <div class="image">
+                <img src="img/ema.png" alt="Email Icon">
+            </div>
+            <a href="mailto:altaf.a.hina@gmail.com" target="_blank" class="email-link">altaf.a.hina@gmail.com</a>
+            <div class="image">
+                <img src="img/loc.png" alt="Location Icon">
+            </div>
+            <p>via dei tribunali</p>
+        </div>
+        <div class="banner-container2">
+            <div class="banner-2">
+                <div class="image-logo">
+                    <img src="img/ki.png.png" alt="Logo">
+                </div>
+            </div>
+            <div class="search-container">
+                <form action="/search" method="GET">
+                    <input type="text" name="query" placeholder="Search...">
+                    <button type="submit">Search</button>
+                </form>
+            </div>
+            <div class="cart-container">
+                <div class="cart">
+                    <a href="checkout.html" target="_blank">
+                        <img src="img/sh.png" alt="Cart Icon">
+                    </a>
+                    <span class="quantity">0</span>
+                </div>
+            </div>
+        </div>
+        <div class="banner-3">
+            <button class="dropbtn">Home</button>
+            <div class="dropdown">
+                <button class="dropbtn">Categories</button>
+                <div class="dropdown-content">
+                    <a href="Meat & Polutry.html">Meat & Poultry</a>
+                    <a href="Fish & seafood.html">Fish & Seafood</a>
+                    <a href="Fruit & Vegetables.html">Fruit & Vegetables</a>
+                    <a href="Bakery & cakes.html">Bakery & Cakes</a>
+                    <a href="Choclates & sweets.html">Chocolates & Sweets</a>
+                    <a href="Frozen.html">Frozen</a>
+                    <a href="Drinks.html">Drinks</a>
+                    <a href="Beer,wine & spritz.html">Beer, Wine & Spirits</a>
+                    <a href="Toiletries & Beauties.html">Toiletries & Beauty</a>
+                    <a href="Household.html">Household</a>
+                    <a href="Home & gardern.html">Home & Garden</a>
+                    <a href="Baby & toddler.html">Baby & Toddler</a>
+                    <a href="Toys & and entertainment.html">Toys & Entertainment</a>
+                    <a href="Pets.html">Pets</a>
+                </div>
+            </div>
+            <button class="dropbtn">Delivery</button>
+            <button class="dropbtn">About Us</button>
+            <button class="dropbtn">Contact Us</button>
+        </div>
+    </div>
+<div class="slideshow-container">
+    <div class="mySlides fade">
+        <img src="img/1.png" class="y">
+    </div>
+    <div class="mySlides fade">
+        <img src="img/2.png" class="y">
+    </div>
+    <div class="mySlides fade">
+        <img src="img/3.png"class="y">
+    </div>
+
+    <div class="dots-container">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+</div>
+<script>
+/* script.js */
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+}
+</script>
+
+	<div class="product-container">
+	<img src="img/me.jpeg">
+	<p> la merenda prosciutto cotto</p>
+	<button type="button">Add to cart</button>
+	</div>
+</body>
+</html>
+
+
+
